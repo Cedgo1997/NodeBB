@@ -1,0 +1,32 @@
+{
+    "name": "nodebb-theme-software",
+    "version": "0.1.0",
+    "description": "Enter a description here",
+    "main": "lib/theme.js",
+    "keywords": [],
+    "license": "MIT",
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx lint-staged",
+            "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@commitlint/cli": "11.0.0",
+        "@commitlint/config-angular": "11.0.0",
+        "eslint": "8.x",
+        "eslint-config-airbnb-base": "14.2.1",
+        "eslint-config-nodebb": "0.1.1",
+        "eslint-plugin-import": "2.x",
+        "husky": "5.0.9",
+        "lint-staged": "10.5.4"
+    }
+}
